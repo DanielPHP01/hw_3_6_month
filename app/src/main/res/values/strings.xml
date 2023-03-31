@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">hw_3_6_month</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="ready">Готово</string>
+    <string name="photo">\ фотографий\</string>
+    <string name="photo_choosing">Выбор фотографии</string>
+    <string name="chosen_photos">Выбранные фотографии</string>
+    <string name="number_of_chosen_photos">Выбрано %1$s фотографии</string>
+    <string name="url">android.resource://kg.geektech.HomeWork3/%1$s</string>
+    <string name="todo">todo</string>
+    <string name="choice_photo">Выбор фотографии</string>
+    <string name="selected_image">Выбранные фотографии</string>
+    <string name="color">#BB4444</string>
+    <string name="selected">\Выбрано \</string>
+</resources>
