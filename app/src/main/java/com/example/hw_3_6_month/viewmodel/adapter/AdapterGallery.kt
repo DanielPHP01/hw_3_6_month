@@ -34,24 +34,23 @@ class AdapterGallery(private val listener: Listener) :
         init {
             binding.root.setOnClickListener {
                 val image = imageList[adapterPosition]
-                if (binding.imageShadow.alpha == 1f) {
+                if (binding.imageShadow.alpha == 0f) {
                     listener.deleteClick(image)
-                    binding.imageShadow.animate().alpha(0f).start()
+                    binding.imageShadow.animate().alpha(1f).start()
                 } else {
                     listener.onClick(image)
-                    binding.imageShadow.animate().alpha(1f).start()
+                    binding.imageShadow.animate().alpha(0f).start()
                 }
             }
         }
 
         fun bind(image: Uri) {
+            binding.imageShadow.animate().alpha(0f).start()
             binding.image.setImageURI(image)
-            binding.imageShadow.alpha = if (image in listener.selectedImages) 1f else 0f
         }
     }
 
     interface Listener {
-        val selectedImages: Set<Uri>
         fun onClick(image: Uri)
         fun deleteClick(image: Uri)
     }

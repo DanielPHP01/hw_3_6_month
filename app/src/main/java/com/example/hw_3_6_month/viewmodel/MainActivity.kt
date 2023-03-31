@@ -13,12 +13,11 @@ import com.example.hw_3_6_month.databinding.ActivityMainBinding
 import com.example.hw_3_6_month.viewmodel.adapter.AdapterGallery
 import java.lang.reflect.Constructor
 
-class MainActivity(override val selectedImages: Set<Uri>) : BaseActivity<ActivityMainBinding>(), AdapterGallery.Listener {
+class MainActivity() : BaseActivity<ActivityMainBinding>(), AdapterGallery.Listener {
 
     private val adapter by lazy { AdapterGallery(this) }
     private val imageList = mutableListOf<Uri>()
 
-    override val selectedImages: Set<Uri>
 
     private val pickImageLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()

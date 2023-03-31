@@ -38,21 +38,4 @@ class AdapterSend : RecyclerView.Adapter<AdapterSend.ImageHolder>() {
         notifyDataSetChanged()
     }
 
-
-    fun removeImage(image: Uri) {
-        val index = selectedImages.indexOf(image)
-        if (index != -1) {
-            selectedImages.removeAt(index)
-            notifyItemRemoved(index)
-        }
-    }
-
-
-    fun clearImages() {
-        selectedImages.clear()
-        notifyDataSetChanged()
-    }
-
-
-    fun getSelectedImages(): List<Uri> = selectedImages.toList()
 }

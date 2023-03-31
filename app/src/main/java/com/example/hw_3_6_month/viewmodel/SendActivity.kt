@@ -17,9 +17,6 @@ class SendActivity : BaseActivity<ActivitySendBinding>() {
     override fun initListener() {
         intent.getParcelableArrayListExtra<Uri>(MainActivity.KEY_IMG)?.let {
             adapter.addImages(it)
-            adapter.clearImages()
-            adapter.getSelectedImages()
-            adapter.removeImage(this.onProvideReferrer())
         }
     }
 
