@@ -11,7 +11,7 @@ class AdapterGallery(private val listener: Listener) :
 
     private val imageList = arrayListOf<Uri>()
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override  fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
         val binding = ItemGalleryBinding.inflate(inflater, parent, false)
         return ViewHolder(binding)

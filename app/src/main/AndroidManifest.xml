@@ -12,6 +12,9 @@
         android:theme="@style/Theme.Hw_3_6_month"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityImage"
+            android:exported="false" />
+        <activity
             android:name=".viewmodel.SendActivity"
             android:exported="false" />
         <activity
